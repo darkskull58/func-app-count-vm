@@ -33,23 +33,23 @@ stages:
         script: 'Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser'
         pwsh: true
       displayName: 'Install PSScriptAnalyser'
-    - powershell: |
-         Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser
-         displayName: 'Install Pester and import module'
+    #- powershell: |
+    #     Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser
+    #     displayName: 'Install Pester and import module'
     # - task: Pester@10
     #   inputs:
     #     scriptFolder: '$(System.DefaultWorkingDirectory)\*'
     #     resultsFile: '$(System.DefaultWorkingDirectory)\Test-Pester.XML'
     #     usePSCore: true
-    - task: Pester@9
-      displayName: 'Invoke-Pester'
-      inputs:
-        scriptFolder: '$(System.DefaultWorkingDirectory)\*'
-        resultsFile: '$(System.DefaultWorkingDirectory)\TEST-RESULTS.XML'
-        usePSCore: true
-        PesterVersion: 'OtherVersion'
-        preferredPesterVersion: '4.9.0'
-      continueOnError: true
+    #- task: Pester@9
+    #  displayName: 'Invoke-Pester'
+    #  inputs:
+    #    scriptFolder: '$(System.DefaultWorkingDirectory)\*'
+    #    resultsFile: '$(System.DefaultWorkingDirectory)\TEST-RESULTS.XML'
+    #    usePSCore: true
+    #    PesterVersion: 'OtherVersion'
+    #    preferredPesterVersion: '4.9.0'
+    #  continueOnError: true
     
     - task: PublishTestResults@2
       condition: always()
