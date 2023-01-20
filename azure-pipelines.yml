@@ -1,8 +1,8 @@
 name: DeployAzureFunction
 variables:
-  FunctionAppName: 'ffffat'
-  AzureConnection: 'MPN'
-  ResourcegGroupName: 'RG_ffffa'
+  FunctionAppName: 'souFAui'
+  AzureConnection: 'LTIM_CLOUDLAB_SUB'
+  ResourcegGroupName: 'souFAui_rg'
 
 trigger:
   branches:
